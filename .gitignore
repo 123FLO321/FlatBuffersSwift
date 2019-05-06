@@ -33,3 +33,8 @@ DerivedData
 Carthage/Build
 result
 fbsCG
+
+# SPM
+.DS_Store
+.build
+FlatBuffersSwift.xcodeproj
