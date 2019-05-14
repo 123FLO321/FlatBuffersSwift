@@ -343,7 +343,7 @@ public final class FlatBuffersMemoryReader : FlatBuffersReader {
             throw FlatBuffersReaderError.outOfBufferBounds
         }
 
-        return buffer.load(fromByteOffset: offset, as: T.self)
+        return buffer.advanced(by: offset).assumingMemoryBound(to: T.self).pointee
     }
 
     public func bytes(at offset : Int, length : Int) throws -> UnsafeBufferPointer<UInt8> {
